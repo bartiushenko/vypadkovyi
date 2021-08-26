@@ -1,5 +1,3 @@
-"use strict";
-
 function getRandomState() {
   let dob = new Date(25 * 365 * 24 * 60 * 60 * 1000 + (Date.now() - 25 * 365 * 24 * 60 * 60 * 1000) * Math.random());
   let edrpou = make_edrpou();

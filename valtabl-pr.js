@@ -1,4 +1,3 @@
-"use strict";
 
 function getRandomState() {
   return {
@@ -49,7 +48,8 @@ class LEValuesTable extends React.Component {
       className: "transport-vin"
     }, this.state["transport-vin"]))), /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, "\u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043D\u0438\u0439 \u0437\u0430\u0441\u0456\u0431"), /*#__PURE__*/React.createElement("td", null, "\u0440\u0435\u0454\u0441\u0442\u0440\u0430\u0446\u0456\u0439\u043D\u0438\u0439 \u0437\u043D\u0430\u043A \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043D\u043E\u0433\u043E \u0437\u0430\u0441\u043E\u0431\u0443"), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("span", {
       className: "transport-nomernyi-znak"
-    }, this.state["transport-nomernyi-znak"]))))));
+    }, this.state["transport-nomernyi-znak"]
+    ))))));
   }
 
 }
