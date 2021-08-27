@@ -1,6 +1,6 @@
 
 function getRandomState() {
-  let dob = new Date((Date.now() - 10 * 365 * 24 * 60 * 60 * 1000) * Math.random());
+  let dob = new Date(Date.now() - 10 * 365 * 24 * 60 * 60 * 1000 * Math.random());
   return {
     "land-kadastr": make_digits(12) + ':' + make_digits(3) + ':' + make_digits(4),
     "neruhome-reiestr-nomer": make_digits(13),
