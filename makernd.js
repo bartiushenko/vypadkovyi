@@ -8,7 +8,7 @@ var names = {
      "Ж": ["Аресівна", "Августинівна", "Амбреівна", "Апалонівна", "Адамівна", "Аскольдівна", "Ангелівна", "Арон-Моісеївна", "Богодарівна", "Братиславівна", "Вакуліна", "Вогнедарівна", "Грантівна", "Гедеонівна", "Гусманівна", "Дартан’янівна",  "Добре-Авенірівна", "Енеївна", "Єлісеївна", "Київівна", "Князьївна", "Лимонівна", "Міланівна", "Марсельівна", "Матеоівна", "Нілівна", "Нойівна", "Людвіківна", "Оскарівна", "Одисейівна", "Омарівна", "Октавіанівна", "Платонівна", "Принцівна", "Парижанівна", "Пантелеймонівна", "Річардівна", "Расмад-Ройівна", "Светодарівна", "Сулейманівна", "Спартаківна", "Соломонівна", "Тігранівна", "Тамерланівна", "Торівна", "Тадеушівна", "Шарханівна", "Шамільівна", "Ясмінівна", "Ясонівна", "Ярволодівна", "Яросвітівна", "Яниківна"]
   },
   "прізвище": {
-     "Ч": ["Аббасов", "Абдрахманов", "Абдулов", "Агеєв", "Алаєв", "Алієв", "Ахматов", "Ахметов", "Багаутдінов", "Булатов", "Валєєв", "Валієв", "Галієв", "Галімов", "Галін", "Гізатуллін", "Гініятуллін", "Заріпов", "Ібрагімов", "Ізмайлов", "Карімов", "Кірєєв", "Курдюмов", "Латипов", "Маліков", "Мустафін", "Нагаєв", "Рахманов", "Садиков", "Салімов", "Сафін", "Сарим-Саків", "Султанов", "Тарханов", "Туган-Барановський",  "Тюменєв", "Фаттахова", "Фахрутдінов", "Юсупов", "Якупов", "Яруллін"],
+     "Ч": ["Аббасов", "Абдрахманов", "Абдулов", "Агеєв", "Алаєв", "Алієв", "Ахматов", "Ахметов", "Багаутдінов", "Булатов", "Валєєв", "Валієв", "Галієв", "Галіменко", "Галін", "Гізатуллін", "Гініятуллін", "Заріпов", "Ібрагімов", "Ізмайлов", "Карімов", "Кірєєв", "Курдюмов", "Латипов", "Маліков", "Мустафін", "Нагаєв", "Рахманов", "Садиков", "Салімов", "Сафін", "Сарим-Саків", "Султанов", "Тарханов", "Туган-Барановський",  "Тюменєв", "Фаттахова", "Фахрутдінов", "Юсупов", "Якупов", "Яруллін"],
      "Ж": ["Аббасенко", "Абдрахманенко", "Абдуленко", "Ахматенко", "Ахметенко", "Багаутдіненко", "Булат", "Валєєва", "Валієва", "Галієва", "Галіменко", "Галіна", "Гізатулліненко", "Гініятулліненко", "Заріпенко", "Ібрагіменко", "Ізмайленко", "Каріменко", "Кір", "Курдюменко", "Малікенко", "Мустафіна", "Нагаєнко", "Рахманенко", "Садикенко", "Саліменко", "Сафіна",  "Сарим-Саків", "Султаненко", "Тарханенко", "Туган-Барановська", "Тюмененко", "Фаттахенко", "Фахрутденко", "Юсупенко", "Якупенко", "Ярулла"],
   },
   "ім'я-lat": {
@@ -16,7 +16,7 @@ var names = {
     "Ж": ["Anfisa", "Aurora", "Afina", "Asol", "Avrora", "Apollinariia", "Bozhena", "Beatrisa", "Vesna", "Vseslava", "Valkiviia", "Zhasmin", "Zhenev’ieva", "Zlatovlasa", "Zlatoslava", "Zolushka", "Zemfira", "Zoria", "Ieseniia", "Ievanhelina", "Izabella", "Imperiia", "Izolda", "Kvitka", "Luna", "Liana", "Malva", "Mahdalyna", "Manuela", "Mirabella", "Miia-Khend", "Miia", "Myra-Slava", "Madonna", "Miia-Solomiia", "Nastasia", "Nieva", "Nitsa", "Rosava", "Rehina", "Rozaliia", "Santa-Mariia", "Sulamita", "Samara", "Santa", "Odarka", "Olimpiada", "Tereza", "Teona", "Florentsiia", "Freia", "Khadizha", "Khrustalina", "Tsvitozara", "Shanel", "Iasmin", "Iurika"]
   },
   "прізвище-lat": {
-     "Ч": ["Abbasov", "Abdrakhmanov", "Abdulov", "Aheiev", "Alaiev", "Aliiev", "Akhmatov", "Akhmetov", "Bahautdinov", "Bulatov", "Valieiev", "Valiiev", "Haliiev", "Halimov", "Halin", "Hizatullin", "Hiniiatullin", "Zaripov", "Ibrahimov", "Izmailov", "Karimov", "Kirieiev", "Kurdiumov", "Latypov", "Malikov", "Mustafin", "Nahaiev", "Rakhmanov", "Sadykov", "Salimov", "Safin", "Sarym-Sakiv", "Sultanov", "Tarkhanov", "Tuhan-Baranovskyi",  "Tiumeniev", "Fattakhova", "Fakhrutdinov", "Iusupov", "Iakupov", "Iarullin"],
+     "Ч": ["Abbasov", "Abdrakhmanov", "Abdulov", "Aheiev", "Alaiev", "Aliiev", "Akhmatov", "Akhmetov", "Bahautdinov", "Bulatov", "Valieiev", "Valiiev", "Haliiev", "Halimenko", "Halin", "Hizatullin", "Hiniiatullin", "Zaripov", "Ibrahimov", "Izmailov", "Karimov", "Kirieiev", "Kurdiumov", "Latypov", "Malikov", "Mustafin", "Nahaiev", "Rakhmanov", "Sadykov", "Salimov", "Safin", "Sarym-Sakiv", "Sultanov", "Tarkhanov", "Tuhan-Baranovskyi",  "Tiumeniev", "Fattakhova", "Fakhrutdinov", "Iusupov", "Iakupov", "Iarullin"],
      "Ж": ["Abbasenko", "Abdrakhmanenko", "Abdulenko", "Akhmatenko", "Akhmetenko", "Bahautdinenko", "Bulat", "Valieieva", "Valiieva", "Haliieva", "Halimenko", "Halina", "Hizatullinenko", "Hiniiatullinenko", "Zaripenko", "Ibrahimenko", "Izmailenko", "Karimenko", "Kir", "Kurdiumenko", "Malikenko", "Mustafina", "Nahaienko", "Rakhmanenko", "Sadykenko", "Salimenko", "Safina",  "Sarym-Sakiv", "Sultanenko", "Tarkhanenko", "Tuhan-Baranovska", "Tiumenenko", "Fattakhenko", "Fakhrutdenko", "Iusupenko", "Iakupenko", "Iarulla"]
   }
 };
@@ -105,7 +105,7 @@ function get_zakordon_place() {
 }
 
 function get_id_place() {
-    const cities_id = ["КИЇВ/KYIV", "ЛЬВІВ/LVIV", "ОДЕСА/ODESA", "ДНІПРО/DNIPRO", "ЛУЦЬК/LUTSK"];
+    const cities_id = ["КИЇВ/KYIV", "ЛЬВІВ/LVIV", "ОДЕСА/ODESA", "ДНІПРО/DNIPRO", "ЛУЦЬК/LUTSK", "ЗАПОРІЖЖЯ/ZAPORIZHZHIA"];
     return cities_id[Math.round(Math.random() * cities_id.length) % cities_id.length];
 }
 
@@ -132,7 +132,7 @@ function make_legal_address() {
 function make_le_name() {
   let letype = rnd_arr_element(["ТОВ", "АТ", "ПАТ"]);
   let fname = rnd_arr_element(["Інститут", "НДІ", "КБ", "НВК", "ОКБ"]);
-  let prename = rnd_arr_element(["прикладного", "сучасного", "величного"]);
+  let prename = rnd_arr_element(["прикладного", "сучасного", "величного", "національного"]);
   let name = rnd_arr_element(["пароплавства", "картоплянства", "слугознавства", "народознавства", "рогознавства"]);
   let sname = rnd_arr_element(["конокрадства", "копитознавства", "наноекономіки", "діджиталізації"]);
   let nameafter = rnd_arr_element(["ім. Л. Кравчука","ім. Л. Кучми","ім. В. Ющенко","ім. О. Турчинова","ім. П. Порошенко"])
