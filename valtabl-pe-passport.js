@@ -106,10 +106,7 @@ class ValuesTable extends React.Component {
     }, this.state["zagalna-data-narodgenia"]))), React.createElement("tr", null, React.createElement("td", null, "\u0437\u0430\u0433\u0430\u043B\u044C\u043D\u0430 \u0456\u043D\u0444\u043E"), React.createElement("td", null, "\u0441\u0442\u0430\u0442\u044C"), React.createElement("td", null, React.createElement("span", {
       className: "zagalna-stat"
     }, this.state["zagalna-stat"]))),
-
-     React.createElement("tr", null, React.createElement("td", null, "\u043A\u043E\u043D\u0442\u0430\u043A\u0442\u043D\u0430 \u0456\u043D\u0444\u043E"), React.createElement("td", null, "\u0442\u0435\u043B\u0435\u0444\u043E\u043D"), React.createElement("td", null, React.createElement("span", {
-      className: "contactna-telefon"
-    }, this.state["contactna-telefon"]))), React.createElement("tr", null, React.createElement("td", null, "\u043F\u0430\u0441\u043F\u043E\u0440\u0442 \u0443 \u0432\u0438\u0433\u043B\u044F\u0434\u0456 \u0456\u0434-\u043A\u0430\u0440\u0442\u0438"), React.createElement("td", null, "\u043D\u043E\u043C\u0435\u0440"), React.createElement("td", null, React.createElement("span", {
+     React.createElement("tr", null, React.createElement("td", null, "\u043F\u0430\u0441\u043F\u043E\u0440\u0442 \u0443 \u0432\u0438\u0433\u043B\u044F\u0434\u0456 \u0456\u0434-\u043A\u0430\u0440\u0442\u0438"), React.createElement("td", null, "\u043D\u043E\u043C\u0435\u0440"), React.createElement("td", null, React.createElement("span", {
       className: "id-card-nomer"
     }, this.state["id-card-nomer"]))), React.createElement("tr", null, React.createElement("td", null, "\u043F\u0430\u0441\u043F\u043E\u0440\u0442 \u0443 \u0432\u0438\u0433\u043B\u044F\u0434\u0456 \u0456\u0434-\u043A\u0430\u0440\u0442\u0438"), React.createElement("td", null, "\u0434\u0430\u0442\u0430 \u0432\u0438\u0434\u0430\u0447\u0456"), React.createElement("td", null, React.createElement("span", {
       className: "id-card-data-vydachi"
