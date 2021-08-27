@@ -125,6 +125,10 @@ function rnd_arr_element(items) {
    return items[Math.floor(Math.random()*items.length)];
 }
 
+function rnd_arr_elements(items, n) {
+  return Array.from({length: n}, () => rnd_arr_element(items));
+}
+
 function make_legal_address() {
   return get_city() +", "+ get_street() +", " + get_house_number()  + ((Math.random()> 0.5)? (", " + get_app_number()): "");
 }
