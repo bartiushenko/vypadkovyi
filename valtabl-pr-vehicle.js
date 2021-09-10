@@ -59,13 +59,13 @@ class LEValuesTable extends React.Component {
      React.createElement("tr", null, 
                   React.createElement("td", null, "транспортний засіб"), 
                   React.createElement("td", null, "повна маса"), 
-                  React.createElement("td", null, React.createElement("span", {className: "transport-dov"}, this.state["transport-maximum-mass"])
+                  React.createElement("td", null, React.createElement("span", {className: "transport-maximum-mass"}, this.state["transport-maximum-mass"])
     )),
                                                                                             
     React.createElement("tr", null, 
                   React.createElement("td", null, "транспортний засіб"), 
                   React.createElement("td", null, "власна маса"), 
-                  React.createElement("td", null, React.createElement("span", {className: "transport-dov"}, this.state["transport-mass"])
+                  React.createElement("td", null, React.createElement("span", {className: "transport-mass"}, this.state["transport-mass"])
     )),
                                                                                             
  /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, "\u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043D\u0438\u0439 \u0437\u0430\u0441\u0456\u0431"), /*#__PURE__*/React.createElement("td", null, "\u0456\u0434\u0435\u043D\u0442\u0438\u0444\u0456\u043A\u0430\u0446\u0456\u0439\u043D\u0438\u0439 \u043D\u043E\u043C\u0435\u0440 \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043D\u043E\u0433\u043E \u0437\u0430\u0441\u043E\u0431\u0443 (VIN)"), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("span", {
