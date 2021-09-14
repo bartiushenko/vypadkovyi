@@ -37,7 +37,7 @@ class LEValuesTable extends React.Component {
                                                   onChange: this.setNeededNcoins,
                                                   value: this.state['ncoins']
                                                 }),
-                                             React.createElement("button", {onClick: this.nextRandomState}, "підкинути"))),
+                                             React.createElement("button", {onClick: this.nextRandomState,  className: "col-sm-2  btn-primary mb-2"}, "підкинути"))),
            React.createElement("div", {style: {"word-wrap": "break-word"}}, images)
     );
   }
