@@ -129,6 +129,11 @@ function rnd_arr_elements(items, n) {
   return Array.from({length: n}, () => rnd_arr_element(items));
 }
 
+function take_n_elements(items, n) {
+  let shuffled = items.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, n);
+}
+
 function make_legal_address() {
   return get_city() +", "+ get_street() +", " + get_house_number()  + ((Math.random()> 0.5)? (", " + get_app_number()): "");
 }

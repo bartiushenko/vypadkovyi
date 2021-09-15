@@ -20,7 +20,8 @@ export class PwdValuesTable extends React.Component {
   constructor() {
     super();
     this.setNeededNcoins = this.setNeededNcoins.bind(this);
-    this.state = {"npwd": 12}
+    this.shouldReload = this.shouldReload.bind(this);
+    this.state = {"npwd": 12, reload: true}
   }
 
   setNeededNcoins(event) {
@@ -32,6 +33,10 @@ export class PwdValuesTable extends React.Component {
     }
   }
 
+  shouldReload() {
+    this.setState({reload:!this.state.reload});
+  }
+
   render() {
     let images = getRandomPasswords(this.state["npwd"])
       .map(item => React.createElement("tr", null,
@@ -39,13 +44,16 @@ export class PwdValuesTable extends React.Component {
        React.createElement("td", null, React.createElement("span", {"className": item["cn"]}, item["v"]))
     ));
     return React.createElement("table", {className: "table table-striped thead-dark"},
+          React.createElement("colgroup", null,
+            React.createElement("col", {style: {width: "30%"}}),
+            React.createElement("col", null)),
           React.createElement("thead", null,
            React.createElement("tr", null,
              React.createElement("td", {"className": "form-inline", "colspan": 2},
                React.createElement("span", {className: "form-group mx-sm-3 mb-2"},
                  React.createElement("label", {"htmlFor":  "inptNPwd", className: "col-sm-2 col-form-label"}, "кількість cимволів"),
                  React.createElement("input", {type: "text", id: "inptNPwd", onChange: this.setNeededNcoins, value: this.state['npwd']})),
-               React.createElement("button", {onClick: this.nextRandomState,  className: "col-sm-2  btn-primary mb-2"}, "оновити")))),
+               React.createElement("button", {onClick: this.shouldReload,  className: "col-sm-2  btn-primary mb-2"}, "оновити")))),
           React.createElement("tbody", null,          images)
     );
   }
