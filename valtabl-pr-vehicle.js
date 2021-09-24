@@ -40,7 +40,7 @@ class LEValuesTable extends React.Component {
         width: "33%"
       }
     })), /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "\u0411\u041B\u041E\u041A"), /*#__PURE__*/React.createElement("th", null, "\u041A\u041B\u042E\u0427"), /*#__PURE__*/React.createElement("th", null, "\u0417\u041D\u0410\u0427\u0415\u041D\u041D\u042F ", /*#__PURE__*/React.createElement("button", {
-      onClick: this.nextRandomState,  className: "col-sm-2  btn-primary mb-2"
+      onClick: this.nextRandomState,  className: "btn-primary mb-2"
     }, "оновити")))), /*#__PURE__*/React.createElement("tbody", null,
    
 
