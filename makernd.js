@@ -130,7 +130,7 @@ function rnd_arr_elements(items, n) {
 }
 
 function take_n_elements(items, n) {
-  let shuffled = items.sort(() => 0.5 - Math.random());
+  let shuffled = items.slice().sort(() => 0.5 - Math.random());
   return shuffled.slice(0, n);
 }
 
