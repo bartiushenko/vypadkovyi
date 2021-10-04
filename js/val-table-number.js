@@ -44,7 +44,7 @@ export class NumberValuesTable extends React.Component {
 
 
   render() {
-    let numbers =  Array.from({length: this.state["nnumber"]}, () => getRandomInt(this.state["min", this.state["max"]))
+    let numbers =  Array.from({length: this.state["nnumber"]}, () => getRandomInt(this.state["min"], this.state["max"]))
      .map(item => React.createElement("tr", null,
            React.createElement("td", null, React.createElement("span", null, item))
         ));
