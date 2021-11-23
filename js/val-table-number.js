@@ -9,7 +9,7 @@ export class NumberValuesTable extends React.Component {
     this.setNeededMin = this.setNeededMin.bind(this);
     this.setNeededMax = this.setNeededMax.bind(this);
     this.shouldReload = this.shouldReload.bind(this);
-    this.state = {"nnumber": 2, "reload": true, "min": 1, "max":100}
+    this.state = {"nnumber": 10, "reload": true, "min": 1, "max":100}
   }
 
   setNeededNumbers(event) {
