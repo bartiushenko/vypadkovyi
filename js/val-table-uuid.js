@@ -11,7 +11,7 @@ export class UUIDValuesTable extends React.Component {
     super();
     this.setNeededUUIDs = this.setNeededUUIDs.bind(this);
     this.shouldReload = this.shouldReload.bind(this);
-    this.state = {"nuuid": 2, "reload": true}
+    this.state = {"nuuid": 10, "reload": true}
   }
 
   setNeededUUIDs(event) {
