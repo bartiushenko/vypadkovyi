@@ -29,54 +29,49 @@ class LEValuesTable extends React.Component {
   }
 
   render() {
-    return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("table", {
+    return React.createElement("div", null, React.createElement("table", {
       className: "table table-striped thead-dark"
-    }, /*#__PURE__*/React.createElement("colgroup", null, /*#__PURE__*/React.createElement("col", {
+    }, React.createElement("colgroup", null, React.createElement("col", {
       style: {
-        width: "15%"
+        width: "60%"
       }
-    }), /*#__PURE__*/React.createElement("col", null), /*#__PURE__*/React.createElement("col", {
-      style: {
-        width: "33%"
-      }
-    })), /*#__PURE__*/React.createElement("thead", null, /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("th", null, "\u0411\u041B\u041E\u041A"), /*#__PURE__*/React.createElement("th", null, "\u041A\u041B\u042E\u0427"), /*#__PURE__*/React.createElement("th", null, "\u0417\u041D\u0410\u0427\u0415\u041D\u041D\u042F ", /*#__PURE__*/React.createElement("button", {
+    })), React.createElement("thead", null, React.createElement("tr", null,
+    React.createElement("th", null, ""),
+    React.createElement("th", null, "", React.createElement("button", {
       onClick: this.nextRandomState,  className: "btn-primary mb-2"
-    }, "оновити")))), /*#__PURE__*/React.createElement("tbody", null,
+    }, "оновити")))), React.createElement("tbody", null,
    
 
     React.createElement("tr", null, 
-                  React.createElement("td", null, "транспортний засіб"), 
                   React.createElement("td", null, "дата будівництва"), 
                   React.createElement("td", null, React.createElement("span", {className: "transport-dov"}, this.state["transport-dov"])
     )),
 
     React.createElement("tr", null, 
-                  React.createElement("td", null, "транспортний засіб"), 
                   React.createElement("td", null, "тип"), 
                   React.createElement("td", null, React.createElement("span", {className: "transport-type"}, this.state["transport-type"])
     )),
                                                                                             
      React.createElement("tr", null, 
-                  React.createElement("td", null, "транспортний засіб"), 
-                  React.createElement("td", null, "повна маса"), 
+                  React.createElement("td", null, "повна маса, кг"),
                   React.createElement("td", null, React.createElement("span", {className: "transport-maximum-mass"}, this.state["transport-maximum-mass"])
     )),
                                                                                             
     React.createElement("tr", null, 
-                  React.createElement("td", null, "транспортний засіб"), 
-                  React.createElement("td", null, "власна маса"), 
+                  React.createElement("td", null, "власна маса, кг"),
                   React.createElement("td", null, React.createElement("span", {className: "transport-mass"}, this.state["transport-mass"])
     )),
                                                                                             
- /*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/React.createElement("td", null, "\u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043D\u0438\u0439 \u0437\u0430\u0441\u0456\u0431"), /*#__PURE__*/React.createElement("td", null, "\u0456\u0434\u0435\u043D\u0442\u0438\u0444\u0456\u043A\u0430\u0446\u0456\u0439\u043D\u0438\u0439 \u043D\u043E\u043C\u0435\u0440 \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043D\u043E\u0433\u043E \u0437\u0430\u0441\u043E\u0431\u0443 (VIN)"), /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("span", {
+ React.createElement("tr", null,
+  React.createElement("td", null, "ідентифікаційний номер транспортного засобу (VIN)"),
+  React.createElement("td", null, React.createElement("span", {
       className: "transport-vin"
     }, this.state["transport-vin"]))), 
 
 
-/*#__PURE__*/React.createElement("tr", null, /*#__PURE__*/
-           React.createElement("td", null, "\u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043D\u0438\u0439 \u0437\u0430\u0441\u0456\u0431"), 
-       /*#__PURE__*/React.createElement("td", null, "\u0440\u0435\u0454\u0441\u0442\u0440\u0430\u0446\u0456\u0439\u043D\u0438\u0439 \u0437\u043D\u0430\u043A \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442\u043D\u043E\u0433\u043E \u0437\u0430\u0441\u043E\u0431\u0443"), 
-         /*#__PURE__*/React.createElement("td", null, /*#__PURE__*/React.createElement("span", {
+React.createElement("tr", null, 
+       React.createElement("td", null, "реєстраційний знак транспортного засобу"),
+         React.createElement("td", null, React.createElement("span", {
       className: "transport-nomernyi-znak"
     }, this.state["transport-nomernyi-znak"]
     ))))));
@@ -84,4 +79,4 @@ class LEValuesTable extends React.Component {
 
 }
 
-ReactDOM.render( /*#__PURE__*/React.createElement(LEValuesTable, null), document.getElementById("root"));
+ReactDOM.render( React.createElement(LEValuesTable, null), document.getElementById("root"));
