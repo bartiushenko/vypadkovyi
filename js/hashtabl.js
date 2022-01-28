@@ -1,7 +1,7 @@
 async function sha256(message, algo) {
     // encode as UTF-8
     console.log("encode " + message + " " + algo);
-    const msgBuffer = new TextEncoder().encode(message);                    
+    const msgBuffer = new TextEncoder().encode(message);
 
     // hash the message
     const hashBuffer = await crypto.subtle.digest(algo, msgBuffer);
@@ -14,53 +14,71 @@ async function sha256(message, algo) {
     return hashHex;
 }
 
-export class ListOrderingValuesTable extends React.Component {
-  constructor() {
-    super();
-    this.setMsg = this.setMsg.bind(this);
-    this.setAlgo = this.setAlgo.bind(this);
-    this.shouldReload = this.shouldReload.bind(this);
-    this.state = {"msg": "повідомлення", "algo": "SHA256", "reload": true}
-  }
-
-  setAlgo(event) {
-    try {
-      console.log(event);
-      let newAlgo = event.target.value.split(",");
-      sha256(this.state["msg"], newAlgo).then(out => this.setState({"algo": newAlgo, "out": out}));
-    } catch (err) {
-      console.log(err);
+export class HashTable extends React.Component {
+    constructor() {
+        super();
+        this.setMsg = this.setMsg.bind(this);
+        this.setAlgo = this.setAlgo.bind(this);
+        this.shouldReload = this.shouldReload.bind(this);
+        this.state = {"msg": "повідомлення", "algo": "SHA-1", "reload": true}
     }
-  }
-  
-  setMsg(event) {
-    try {
-      console.log(event);
-      let newMsg = event.target.value.split(",");
-      sha256(newMsg, this.state["algo"]).then(out => this.setState({"msg": newMsg, "out": out}));
-    } catch (err) {
-      console.log(err);
+
+    setAlgo(event) {
+        let newAlgo = event.target.value;
+        this.setState({"algo": newAlgo, "out": ""});
     }
-  }
 
-  shouldReload() {
-    sha256(newMsg, this.state["algo"]).then(out => this.setState({"out": out, reload: !this.state.reload}));
-  }
+    setMsg(event) {
+        let newMsg = event.target.value;
+        this.setState({"msg": newMsg, "out": ""});
+    }
+
+    shouldReload() {
+        sha256(this.state["msg"], this.state["algo"]).then(out => this.setState({
+            "out": out,
+            reload: !this.state.reload
+        }));
+    }
 
 
-  render() {
-    return React.createElement("table", {className: "table table-striped thead-dark"},
-          React.createElement("thead", null,
-           React.createElement("tr", null,
-             React.createElement("td", {"className": "form-inline"},
-               React.createElement("span", {className: "form-group mx-sm-3 mb-2"},
-                 React.createElement("label", {"htmlFor":  "inputlistfor", className: "col-sm-2 col-form-label"}, "повідомлення"),
-                 React.createElement("textarea", {id: "inputmsgfor", onChange: this.setMsg, value: this.state['msg']})),
-               React.createElement("span", {className: "form-group mx-sm-3 mb-2"},
-                 React.createElement("label", {"htmlFor":  "inputlistfor", className: "col-sm-2 col-form-label"}, "алгоритм"),
-                 React.createElement("textarea", {id: "inputalgofor", onChange: this.setAlgo, value: this.state['algo']})),
-               React.createElement("button", {onClick: this.shouldReload,  className: "col-sm-2  btn-primary mb-2"}, "оновити")))),
-          React.createElement("tbody", null,          this.state['out'])
-    );
-  }
+    render() {
+        return React.createElement("table", {className: "table table-striped thead-dark"},
+            React.createElement("thead", null,
+                React.createElement("tr", null,
+                    React.createElement("td", {"className": "form-inline"},
+                        React.createElement("span", {className: "form-group mx-sm-3 mb-2"},
+                            React.createElement("label", {
+                                "htmlFor": "inputlistfor",
+                                className: "col-sm-2 col-form-label"
+                            }, "текст"),
+                            React.createElement("textarea", {
+                                id: "inputmsgfor",
+                                onChange: this.setMsg,
+                                value: this.state['msg']
+                            })),
+                        React.createElement("span", {className: "form-group mx-sm-3 mb-2"},
+                            React.createElement("label", {
+                                "htmlFor": "inputlistfor",
+                                className: "col-sm-2 col-form-label"
+                            }, "алгоритм"),
+                            React.createElement("select", {
+                                    id: "inputalgofor",
+                                    onChange: this.setAlgo,
+                                    value: this.state['algo']
+                                },
+                                React.createElement("option", {value: "SHA-256"}, "SHA-1"),
+                                React.createElement("option", {value: "SHA-256"}, "SHA-256"),
+                                React.createElement("option", {value: "SHA-384"}, "SHA-384"),
+                                React.createElement("option", {value: "SHA-512"}, "SHA-512"),
+                            )),
+                        React.createElement("button", {
+                            onClick: this.shouldReload,
+                            className: "col-sm-2  btn-primary mb-2"
+                        }, "обчислити")))),
+            React.createElement("tbody", null,
+                React.createElement("tr", null,
+                    React.createElement("td", null, this.state['out'])
+                ))
+        );
+    }
 }
