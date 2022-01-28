@@ -1,26 +1,19 @@
-async function sha256(message, algo) {
-    // encode as UTF-8
-    console.log("encode " + message + " " + algo);
-    const msgBuffer = new TextEncoder().encode(message);
-
-    // hash the message
-    const hashBuffer = await crypto.subtle.digest(algo, msgBuffer);
-
-    // convert ArrayBuffer to Array
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-
-    // convert bytes to hex string                  
-    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-    return hashHex;
+function getEncoded(message, algo) {
+    if (algo == "base-64")
+        return btoa(toBinary(message));
+    if (algo == "encodeURI")
+        return encodeURI(message);
+    if (algo == "encodeURIComponent")
+        return encodeURIComponent(message);
 }
 
-export class HashTable extends React.Component {
+export class EncodingTable extends React.Component {
     constructor() {
         super();
         this.setMsg = this.setMsg.bind(this);
         this.setAlgo = this.setAlgo.bind(this);
         this.shouldReload = this.shouldReload.bind(this);
-        this.state = {"msg": "повідомлення", "algo": "SHA-1", "reload": true}
+        this.state = {"msg": "повідомлення", "algo": "base-64", "reload": true}
     }
 
     setAlgo(event) {
@@ -34,10 +27,10 @@ export class HashTable extends React.Component {
     }
 
     shouldReload() {
-        sha256(this.state["msg"], this.state["algo"]).then(out => this.setState({
-            "out": out,
+      this.setState({
+            "out": getEncoded(this.state["msg"], this.state["algo"]),
             reload: !this.state.reload
-        }));
+        });
     }
 
 
@@ -66,15 +59,14 @@ export class HashTable extends React.Component {
                                     onChange: this.setAlgo,
                                     value: this.state['algo']
                                 },
-                                React.createElement("option", {value: "SHA-256"}, "SHA-1"),
-                                React.createElement("option", {value: "SHA-256"}, "SHA-256"),
-                                React.createElement("option", {value: "SHA-384"}, "SHA-384"),
-                                React.createElement("option", {value: "SHA-512"}, "SHA-512"),
+                                React.createElement("option", {value: "base-64"}, "base-64"),
+                                React.createElement("option", {value: "encodeURI"}, "encodeURI"),
+                                React.createElement("option", {value: "encodeURIComponent"}, "encodeURIComponent"),
                             )),
                         React.createElement("button", {
                             onClick: this.shouldReload,
                             className: "col-sm-2  btn-primary mb-2"
-                        }, "обчислити")))),
+                        }, "кодувати")))),
             React.createElement("tbody", null,
                 React.createElement("tr", null,
                     React.createElement("td", null, this.state['out'])
