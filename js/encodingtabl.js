@@ -35,11 +35,8 @@ export class EncodingTable extends React.Component {
 
 
     render() {
-        return React.createElement("table", {className: "table table-striped thead-dark"},
-            React.createElement("thead", null,
-                React.createElement("tr", null,
-                    React.createElement("td", {"className": "form-inline"},
-                        React.createElement("span", {className: "form-group mx-sm-3 mb-2"},
+        return React.createElement("article", {className: "table table-striped thead-dark"},
+                        React.createElement("p", {className: "form-group mx-sm-3 mb-2"},
                             React.createElement("label", {
                                 "htmlFor": "inputlistfor",
                                 className: "col-sm-2 col-form-label"
@@ -49,7 +46,7 @@ export class EncodingTable extends React.Component {
                                 onChange: this.setMsg,
                                 value: this.state['msg']
                             })),
-                        React.createElement("span", {className: "form-group mx-sm-3 mb-2"},
+                        React.createElement("p", {className: "form-group mx-sm-3 mb-2"},
                             React.createElement("label", {
                                 "htmlFor": "inputlistfor",
                                 className: "col-sm-2 col-form-label"
@@ -66,11 +63,8 @@ export class EncodingTable extends React.Component {
                         React.createElement("button", {
                             onClick: this.shouldReload,
                             className: "col-sm-2  btn-primary mb-2"
-                        }, "кодувати")))),
-            React.createElement("tbody", null,
-                React.createElement("tr", null,
-                    React.createElement("td", null, this.state['out'])
-                ))
+                        }, "кодувати"),
+                    React.createElement("p", null, this.state['out'])
         );
     }
 }
