@@ -42,11 +42,8 @@ export class HashTable extends React.Component {
 
 
     render() {
-        return React.createElement("table", {className: "table table-striped thead-dark"},
-            React.createElement("thead", null,
-                React.createElement("tr", null,
-                    React.createElement("td", {"className": "form-inline"},
-                        React.createElement("span", {className: "form-group mx-sm-3 mb-2"},
+        return React.createElement("article", {className: "table table-striped thead-dark"},
+                        React.createElement("p", {className: "form-group mx-sm-3 mb-2"},
                             React.createElement("label", {
                                 "htmlFor": "inputlistfor",
                                 className: "col-sm-2 col-form-label"
@@ -56,7 +53,7 @@ export class HashTable extends React.Component {
                                 onChange: this.setMsg,
                                 value: this.state['msg']
                             })),
-                        React.createElement("span", {className: "form-group mx-sm-3 mb-2"},
+                        React.createElement("p", {className: "form-group mx-sm-3 mb-2"},
                             React.createElement("label", {
                                 "htmlFor": "inputlistfor",
                                 className: "col-sm-2 col-form-label"
@@ -66,7 +63,7 @@ export class HashTable extends React.Component {
                                     onChange: this.setAlgo,
                                     value: this.state['algo']
                                 },
-                                React.createElement("option", {value: "SHA-256"}, "SHA-1"),
+                                React.createElement("option", {value: "SHA-1"}, "SHA-1"),
                                 React.createElement("option", {value: "SHA-256"}, "SHA-256"),
                                 React.createElement("option", {value: "SHA-384"}, "SHA-384"),
                                 React.createElement("option", {value: "SHA-512"}, "SHA-512"),
@@ -74,11 +71,8 @@ export class HashTable extends React.Component {
                         React.createElement("button", {
                             onClick: this.shouldReload,
                             className: "col-sm-2  btn-primary mb-2"
-                        }, "обчислити")))),
-            React.createElement("tbody", null,
-                React.createElement("tr", null,
-                    React.createElement("td", null, this.state['out'])
-                ))
+                        }, "обчислити"),
+                    React.createElement("p", null, this.state['out'])
         );
     }
 }
