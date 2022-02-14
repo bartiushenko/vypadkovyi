@@ -13,7 +13,7 @@ export class DecodingTable extends React.Component {
         this.setMsg = this.setMsg.bind(this);
         this.setAlgo = this.setAlgo.bind(this);
         this.shouldReload = this.shouldReload.bind(this);
-        this.state = {"msg": "PwQ+BDIEVgQ0BD4EPAQ7BDUEPQQ9BE8E", "algo": "base-64", "reload": true}
+        this.state = {"msg": "0L/QvtCy0ZbQtNC+0LzQu9C10L3QvdGP", "algo": "base-64", "reload": true}
     }
 
     setAlgo(event) {
