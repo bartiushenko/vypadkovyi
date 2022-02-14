@@ -1,6 +1,6 @@
 function getEncoded(message, algo) {
     if (algo == "base-64")
-        return btoa(toBinary(message));
+        return btoa(unescape(encodeURIComponent(message)));
     if (algo == "encodeURI")
         return encodeURI(message);
     if (algo == "encodeURIComponent")
