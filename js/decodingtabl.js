@@ -1,6 +1,6 @@
 function getEncoded(message, algo) {
     if (algo == "base-64")
-        return fromBinary(atob(message));
+        return decodeURIComponent(escape(atob(message)));
     if (algo == "decodeURI")
         return decodeURI(message);
     if (algo == "decodeURIComponent")
