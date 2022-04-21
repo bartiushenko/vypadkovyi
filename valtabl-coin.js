@@ -11,7 +11,7 @@ class LEValuesTable extends React.Component {
     super();
     this.nextRandomState = this.nextRandomState.bind(this);
     this.setNeededNcoins = this.setNeededNcoins.bind(this);
-    this.state = getRandomState(2);
+    this.state = getRandomState(1);
   }
 
   nextRandomState() {
